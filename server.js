@@ -13,12 +13,12 @@ const { hostname } = require("os");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-// app.use(enforce.HTTPS({ trustProtoHeader: true }));
+app.use(enforce.HTTPS({ trustProtoHeader: true }));
 app.use(cors());
 
 //ROUTES --------------------------------------------------------
 
-// app.use(express.static(path.join(__dirname, "/build")));
+app.use(express.static(path.join(__dirname, "/build")));
 
 app.get("/", function (req, res) {
   res.send("api");
@@ -28,7 +28,7 @@ let Logs = [];
 
 const readDirectory = (req, callback) => {
   fs.readdir("./public/uploads", function (err, items) {
-    if (items.length !== undefined) {
+    if (items !== undefined) {
       const links = items.map((item) => {
         return {
           musicSrc: "http://" + req.headers.host + "/uploads/" + item,
