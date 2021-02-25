@@ -1,33 +1,31 @@
 {
   "files": {
     "main.css": "/static/css/main.897b831c.chunk.css",
-    "main.js": "/static/js/main.6614677d.chunk.js",
-    "main.js.map": "/static/js/main.6614677d.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.305c4076.js",
-    "runtime-main.js.map": "/static/js/runtime-main.305c4076.js.map",
+    "main.js": "/static/js/main.7173314e.chunk.js",
+    "main.js.map": "/static/js/main.7173314e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c728c58c.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c728c58c.js.map",
     "static/css/2.68a64ca3.chunk.css": "/static/css/2.68a64ca3.chunk.css",
-    "static/js/2.ceae3b47.chunk.js": "/static/js/2.ceae3b47.chunk.js",
-    "static/js/2.ceae3b47.chunk.js.map": "/static/js/2.ceae3b47.chunk.js.map",
-    "static/js/3.084a1a70.chunk.js": "/static/js/3.084a1a70.chunk.js",
-    "static/js/3.084a1a70.chunk.js.map": "/static/js/3.084a1a70.chunk.js.map",
+    "static/js/2.49659744.chunk.js": "/static/js/2.49659744.chunk.js",
+    "static/js/2.49659744.chunk.js.map": "/static/js/2.49659744.chunk.js.map",
+    "static/js/3.09983619.chunk.js": "/static/js/3.09983619.chunk.js",
+    "static/js/3.09983619.chunk.js.map": "/static/js/3.09983619.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.68a64ca3.chunk.css.map": "/static/css/2.68a64ca3.chunk.css.map",
     "static/css/main.897b831c.chunk.css.map": "/static/css/main.897b831c.chunk.css.map",
-    "static/js/2.ceae3b47.chunk.js.LICENSE.txt": "/static/js/2.ceae3b47.chunk.js.LICENSE.txt",
+    "static/js/2.49659744.chunk.js.LICENSE.txt": "/static/js/2.49659744.chunk.js.LICENSE.txt",
     "static/media/1.5c5a276a.jpg": "/static/media/1.5c5a276a.jpg",
     "static/media/2.d53d3ae1.jpg": "/static/media/2.d53d3ae1.jpg",
     "static/media/3.9ce7895a.jpg": "/static/media/3.9ce7895a.jpg",
-    "static/media/Moby - Why Does My Heart Feels So Bad  (Ben-E.dit).a322f0c3.mp3": "/static/media/Moby - Why Does My Heart Feels So Bad  (Ben-E.dit).a322f0c3.mp3",
-    "static/media/SoundHelix Song 1.2934f701.mp3": "/static/media/SoundHelix Song 1.2934f701.mp3",
     "static/media/about.a87ddfe5.jpg": "/static/media/about.a87ddfe5.jpg",
     "static/media/Heading.css": "/static/media/main.bc1233ab.jpg",
     "static/media/devel.9011411a.png": "/static/media/devel.9011411a.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.305c4076.js",
+    "static/js/runtime-main.c728c58c.js",
     "static/css/2.68a64ca3.chunk.css",
-    "static/js/2.ceae3b47.chunk.js",
+    "static/js/2.49659744.chunk.js",
     "static/css/main.897b831c.chunk.css",
-    "static/js/main.6614677d.chunk.js"
+    "static/js/main.7173314e.chunk.js"
   ]
 }
