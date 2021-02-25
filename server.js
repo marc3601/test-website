@@ -13,7 +13,7 @@ const { hostname } = require("os");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-// app.use(enforce.HTTPS({ trustProtoHeader: true }));
+app.use(enforce.HTTPS({ trustProtoHeader: true }));
 app.use(cors());
 
 //ROUTES --------------------------------------------------------
@@ -31,7 +31,7 @@ const readDirectory = (req, callback) => {
     console.log(items);
     const links = items.map((item) => {
       return {
-        musicSrc: "http://" + req.headers.host + "/uploads/" + item,
+        musicSrc: "https://" + req.headers.host + "/uploads/" + item,
         name: item,
       };
     });
