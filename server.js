@@ -31,7 +31,7 @@ const readDirectory = (req, callback) => {
     if (items !== undefined) {
       const links = items.map((item) => {
         return {
-          musicSrc: "http://" + req.headers.host + "/uploads/" + item,
+          musicSrc: "https://" + req.headers.host + "/uploads/" + item,
           name: item,
         };
       });
