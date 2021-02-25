@@ -28,7 +28,7 @@ let Logs = [];
 
 const readDirectory = (req, callback) => {
   fs.readdir("./public/uploads", function (err, items) {
-    if (items.length) {
+    if (items.length !== undefined) {
       const links = items.map((item) => {
         return {
           musicSrc: "http://" + req.headers.host + "/uploads/" + item,
