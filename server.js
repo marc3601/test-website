@@ -4,7 +4,7 @@ const ip = process.env.IP || "localhost";
 const port = process.env.PORT || 3000;
 const path = require("path");
 const bodyParser = require("body-parser");
-const enforce = require("express-sslify");
+// const enforce = require("express-sslify");
 const multer = require("multer");
 const cors = require("cors");
 const fs = require("fs");
@@ -13,15 +13,15 @@ const { hostname } = require("os");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(enforce.HTTPS({ trustProtoHeader: true }));
+// app.use(enforce.HTTPS({ trustProtoHeader: true }));
 app.use(cors());
 
 //ROUTES --------------------------------------------------------
 
-app.use(express.static(path.join(__dirname, "/build")));
+// app.use(express.static(path.join(__dirname, "/build")));
 
 app.get("/", function (req, res) {
-  res.sendFile(path.resolve("build/index.html"));
+  res.send("api");
 });
 
 let Logs = [];
