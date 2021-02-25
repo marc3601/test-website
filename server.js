@@ -28,23 +28,19 @@ let Logs = [];
 
 const readDirectory = (req, callback) => {
   fs.readdir("./public/uploads", function (err, items) {
-    console.log(items);
-    try {
-      console.log(items);
+    if (items.length) {
       const links = items.map((item) => {
         return {
           musicSrc: "http://" + req.headers.host + "/uploads/" + item,
           name: item,
         };
-     
       });
-    } catch (error) {
-      console.log(error);
+      Logs.push(links);
+      callback(Logs);
+      Logs = [];
+    } else {
+      return {};
     }
-   
-    Logs.push(links);
-    callback(Logs);
-    Logs = [];
   });
 };
 
@@ -75,8 +71,6 @@ const upload = multer({
     }
   },
 });
-
-
 
 app.post("/data", upload.single("song"), (req, res) => {
   res.sendStatus(200);
