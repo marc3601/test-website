@@ -4,7 +4,7 @@ const ip = process.env.IP || "localhost";
 const port = process.env.PORT || 3000;
 const path = require("path");
 const bodyParser = require("body-parser");
-// const enforce = require("express-sslify");
+const enforce = require("express-sslify");
 const multer = require("multer");
 const cors = require("cors");
 const fs = require("fs");
@@ -25,22 +25,19 @@ app.get("/", function (req, res) {
 });
 
 let Logs = [];
-
 const readDirectory = (req, callback) => {
   fs.readdir("./public/uploads", function (err, items) {
-    if (items.length !== undefined) {
-      const links = items.map((item) => {
-        return {
-          musicSrc: "http://" + req.headers.host + "/uploads/" + item,
-          name: item,
-        };
-      });
-      Logs.push(links);
-      callback(Logs);
-      Logs = [];
-    } else {
-      return {};
-    }
+    if (err) return callback(err);
+    console.log(items);
+    const links = items.map((item) => {
+      return {
+        musicSrc: "http://" + req.headers.host + "/uploads/" + item,
+        name: item,
+      };
+    });
+    Logs.push(links);
+    callback(Logs);
+    Logs = [];
   });
 };
 
