@@ -28,12 +28,20 @@ let Logs = [];
 
 const readDirectory = (req, callback) => {
   fs.readdir("./public/uploads", function (err, items) {
-    const links = items.map((item) => {
-      return {
-        musicSrc: "http://" + req.headers.host + "/uploads/" + item,
-        name: item,
-      };
-    });
+    console.log(items);
+    try {
+      console.log(items);
+      const links = items.map((item) => {
+        return {
+          musicSrc: "http://" + req.headers.host + "/uploads/" + item,
+          name: item,
+        };
+     
+      });
+    } catch (error) {
+      console.log(error);
+    }
+   
     Logs.push(links);
     callback(Logs);
     Logs = [];
